@@ -27,13 +27,13 @@ ex `gcc -share mymax.o -o libmymax.o`
 `ldd ./main`
 
 #### static link
-```bash!
+```bash
 gcc -c -o mymax.o mymax.c
 gcc main.c mymax.o -o main_static
 ```
 
 #### dynamic link
-```bash!
+```bash
 gcc -c mymax.c -o mymax.o
 gcc -shared mymax.o -o libmymax.so
 gcc main.c -o main_dynamic -L. -lmymax
