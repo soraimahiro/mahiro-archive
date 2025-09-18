@@ -6,7 +6,7 @@ import { MagnifyingGlassIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/o
 import ThemeToggle from '../components/ThemeToggle.astro';
 ---
 
-<header class="shadow-sm bg-base-100">
+<header class="shadow-md shadow-blue-500/30 bg-base-100 font-[Ubuntu]">
   <!-- ********** Mobile (< lg): drawer & navbar ********** -->
   <div class="drawer lg:hidden">
     <!-- Hidden checkbox toggles the drawer -->
@@ -30,7 +30,7 @@ import ThemeToggle from '../components/ThemeToggle.astro';
           href="/"
           class="absolute left-1/2 -translate-x-1/2 flex items-center"
         >
-          <Image src={logo} alt="Stargarden logo" class="h-18 w-auto" />
+          <span class="text-xl font-bold">Mahiro Archive</span>
         </a>
         <div class="flex-none ml-auto">
           <button
@@ -84,12 +84,10 @@ import ThemeToggle from '../components/ThemeToggle.astro';
 
   <!-- ********** Desktop (≥ lg): standard navbar ********** -->
   <nav
-    class="navbar hidden lg:flex w-full bg-base-100"
-    style="--navbar-padding:0;"
+    class="navbar hidden lg:flex w-full bg-base-100 pr-3 pl-4 border-b-1 border-blue-200/50"
   >
     <div class="navbar-start">
       <a href="/" class="flex items-center gap-2">
-        <Image src={logo} alt="Stargarden logo" class="h-18 w-auto" />
         <span class="text-xl font-bold">Mahiro Archive</span>
       </a>
     </div>
