@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
 
 import { SEO } from "astro-seo";
 
@@ -31,7 +31,7 @@ const seoConfig = {
 ---
 
 <!doctype html>
-<html lang="en" data-theme="corporate">
+<html lang="zh-tw" data-theme="corporate">
   <head>
     <meta charset="utf-8" />
     <!-- Persisted theme (dark / light) is applied as early as possible -->
@@ -45,23 +45,22 @@ const seoConfig = {
       {...seoConfig}
       title={seoConfig.title}
       description={seoConfig.description ??
-        "StarGarden – a customizable Astro theme"}
-      titleTemplate="%s – StarGarden"
-      titleDefault="StarGarden Theme"
+        "Mahiro Archive - by Sorai Mahiro"}
+      titleTemplate="%s – Sorai Mahiro"
+      titleDefault="Mahiro Archive"
     />
     <script
       type="application/ld+json"
       set:html={JSON.stringify({
-        "@context": "https://schema.org",
+        "@context": "https://mahiro-archive.netlify.app/",
         "@type": "Organization",
         name: "StarGarden",
         url: Astro.site,
-        logo: new URL(logo.src, Astro.site).href,
-        sameAs: ["https://www.youtube.com/@StarGarden"],
+        logo: new URL(logo.src, Astro.site).href
       })}
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com">

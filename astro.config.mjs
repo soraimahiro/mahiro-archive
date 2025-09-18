@@ -27,7 +27,7 @@ const expressiveCode = astroExpressiveCode({
 // https://astro.build/config
 export default defineConfig({
 
-  site: 'https://stargarden.pages.dev',
+  site: 'https://mahiro-archive.netlify.app/',
   vite: {
     plugins: [tailwindcss()]
   },
